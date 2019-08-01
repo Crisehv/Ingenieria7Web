@@ -1,0 +1,135 @@
+body{
+    background-image: url(img/cool-background.png);
+}
+
+nav{
+    min-height: 50px;
+    background-color: #444343;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: #e3e8ec;
+}
+
+nav a:hover{
+    
+}
+
+img{
+    max-width: 100%;
+}
+
+@media(min-width: 768px){
+    nav{
+        min-height: 50px;
+        background-color: #444343;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    nav a{
+        text-decoration: none;
+        color: #e3e8ec;
+        margin-right: 25px;
+    }
+    
+    .contenido-header{
+    background-color: #252323;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    }
+
+    #logo{
+        flex-basis: calc(33.3%);
+        text-align: center;
+        padding: 20px;
+    }
+
+    .contenido-header p{
+        /*text-align: left;*/
+        font-size: 20px;
+        color: #f0ecec;
+    }
+    
+    .contenedor-principal{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contenedor-imagen{
+        width: 40%;
+        padding: 25px;
+    }
+
+    .contenedor-principal p{
+        width: 58%;
+        text-align: justify;
+    }
+}
+
+.contenido-header{
+    background-color: #252323;
+    text-align: center;
+    color: #f0ecec;
+    padding: 20px;
+    font-size: 25px;
+}
+
+main {
+    text-align: center;
+}
+
+footer{
+    background-color: #3b3939;
+    min-height: 125px;
+    color: #e3e8ec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a {
+  z-index: 1;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  background-color: hsl(0, 1%, 26%);
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
+}
+
+nav a::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 100%;
+  right: 100%;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #3cefff;
+  transform-origin: center;
+  transform: translate3d(50%, -50%, 0) scale3d(0, 0, 0);
+  transition: transform 0.45s ease-in-out;
+}
+
+nav a:hover {
+  cursor: pointer;
+  color: #161616;
+}
+
+nav a:hover::before {
+  transform: translate3d(50%, -50%, 0) scale3d(15, 15, 15);
+}
